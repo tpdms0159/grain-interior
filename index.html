@@ -16,12 +16,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=4" />
 </head>
 <body>
   <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo" aria-label="그레인 인테리어 홈"><img src="assets/logo/grain-logo.svg" alt="GRAIN 그레인 인테리어" width="190" height="60" /></a>
+      <a href="index.html" class="logo" aria-label="그레인 인테리어 홈"><img class="logo__dark" src="assets/logo/grain-logo.svg" alt="GRAIN 그레인 인테리어" width="190" height="60" /><img class="logo__light" src="assets/logo/grain-logo-white.svg" alt="" aria-hidden="true" width="190" height="60" /></a>
       <nav class="nav" id="nav" aria-label="주요 메뉴">
         <a href="about.html">About<small>회사소개</small></a>
         <a href="works.html">Works<small>시공사례</small></a>
@@ -40,9 +40,9 @@
     <section class="hero">
       <img class="hero__img" src="assets/img/cafe.jpg" alt="그레인 인테리어가 시공한 카페 내부" fetchpriority="high" />
       <div class="hero__content">
-        <h1>Spaces that<br />open on time.</h1>
-        <p>카페 · 오피스 · 병원 · 매장. 공사 기간을 계약서에 적고,<br /><strong>오픈 날짜에 맞춰</strong> 끝내는 상업공간 인테리어입니다.</p>
-        <div class="hero__actions">
+        <h1 class="lines"><span class="line"><span style="--d:.25s">Spaces that</span></span><span class="line"><span style="--d:.42s">open on time.</span></span></h1>
+        <p class="intro" style="--d:.8s">카페 · 오피스 · 병원 · 매장. 공사 기간을 계약서에 적고,<br /><strong>오픈 날짜에 맞춰</strong> 끝내는 상업공간 인테리어입니다.</p>
+        <div class="hero__actions intro" style="--d:1s">
           <a href="works.html" class="btn btn--white">시공사례 보기</a>
           <a href="contact.html" class="btn btn--ghost">견적 문의</a>
         </div>
@@ -64,13 +64,17 @@
       </div>
     </section>
 
+    <div class="marquee" aria-label="CAFE, OFFICE, CLINIC, RETAIL">
+      <div class="marquee__track" aria-hidden="true"><div><span>CAFE</span><i aria-hidden="true">✦</i><span>OFFICE</span><i aria-hidden="true">✦</i><span>CLINIC</span><i aria-hidden="true">✦</i><span>RETAIL</span><i aria-hidden="true">✦</i><span>SPACES THAT OPEN ON TIME</span><i aria-hidden="true">✦</i></div><div><span>CAFE</span><i aria-hidden="true">✦</i><span>OFFICE</span><i aria-hidden="true">✦</i><span>CLINIC</span><i aria-hidden="true">✦</i><span>RETAIL</span><i aria-hidden="true">✦</i><span>SPACES THAT OPEN ON TIME</span><i aria-hidden="true">✦</i></div></div>
+    </div>
+
     <section class="section section--white">
       <div class="container">
-        <div class="numbers reveal">
-          <div class="num"><strong>320+</strong><span>상업공간 시공</span></div>
-          <div class="num"><strong>98%</strong><span>계약 기간 내 준공</span></div>
-          <div class="num"><strong>12 yrs</strong><span>상업공간 시공 경력</span></div>
-          <div class="num"><strong>1 day</strong><span>문의 후 첫 답변</span></div>
+        <div class="numbers">
+          <div class="num reveal"><strong data-count="320" data-suffix="+">320+</strong><span>상업공간 시공</span></div>
+          <div class="num reveal"><strong data-count="98" data-suffix="%">98%</strong><span>계약 기간 내 준공</span></div>
+          <div class="num reveal"><strong data-count="12" data-suffix=" yrs">12 yrs</strong><span>상업공간 시공 경력</span></div>
+          <div class="num reveal"><strong data-count="24" data-suffix="h">24h</strong><span>영업일 기준 첫 답변</span></div>
         </div>
         <div class="about-row reveal" style="margin-top:96px">
           <span class="big-en">About</span>
@@ -89,7 +93,7 @@
     </section>
 
     <section class="banner">
-      <img src="assets/img/lounge.jpg" alt="" loading="lazy" />
+      <img src="assets/img/lounge.jpg" alt="" loading="lazy" data-parallax />
       <div class="container reveal">
         <span class="label">Service</span>
         <h2>공정별 견적과 <b>날짜 단위 공정표.</b><br />추가금 걱정 없이 <b>오픈을 준비</b>하세요.</h2>
@@ -143,9 +147,9 @@
           <h2 class="big-en">Let's Talk<br />About Space</h2>
           <p>오픈 날짜가 정해졌다면, 공사 일정부터 맞춰 보세요.<br />업종과 면적, 오픈 희망일만 알려주시면<br /><strong>1영업일 안에</strong> 예상 일정과 견적 범위를 안내합니다.</p>
           <div class="actions"><a href="contact.html" class="btn btn--dark">견적 문의</a><a href="tel:023360000" class="btn btn--line btn--plain">02-336-0000</a></div>
-          <img class="side-img" src="assets/img/studio.jpg" alt="자재 샘플과 도면" loading="lazy" />
+          <img class="side-img curtain reveal" src="assets/img/studio.jpg" alt="자재 샘플과 도면" loading="lazy" />
         </div>
-        <img class="main-img reveal" src="assets/img/pilates.jpg" alt="필라테스 스튜디오 시공 사례" loading="lazy" />
+        <img class="main-img curtain reveal" src="assets/img/pilates.jpg" alt="필라테스 스튜디오 시공 사례" loading="lazy" />
       </div>
     </section>
   </main>
@@ -177,6 +181,6 @@
     <a href="contact.html">견적 문의</a>
   </nav>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

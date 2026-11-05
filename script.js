@@ -28,12 +28,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // 모바일 메뉴
   const menuBtn = document.getElementById("menuBtn");
   const nav = document.getElementById("nav");
+  const header = document.querySelector(".header");
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (menuBtn && nav) {
     menuBtn.addEventListener("click", () => {
       const open = menuBtn.getAttribute("aria-expanded") === "true";
       menuBtn.setAttribute("aria-expanded", String(!open));
       menuBtn.setAttribute("aria-label", open ? "메뉴 열기" : "메뉴 닫기");
       nav.classList.toggle("is-open", !open);
+      header && header.classList.toggle("menu-open", !open);
       document.body.style.overflow = open ? "" : "hidden";
     });
   }
@@ -51,14 +54,30 @@ document.addEventListener("DOMContentLoaded", () => {
       </button>`).join("");
   }
 
-  // 필터
+  // 필터: 사라졌다가 하나씩 다시 나타나는 전환
   const filters = document.querySelectorAll(".filter");
   filters.forEach((btn) => btn.addEventListener("click", () => {
+    if (btn.getAttribute("aria-pressed") === "true") return;
     filters.forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
     const t = btn.dataset.filter;
-    document.querySelectorAll(".work").forEach((card) => {
-      card.hidden = t !== "전체" && card.dataset.type !== t;
-    });
+    const apply = () => {
+      let i = 0;
+      grid.querySelectorAll(".work").forEach((card) => {
+        const show = t === "전체" || card.dataset.type === t;
+        card.hidden = !show;
+        card.classList.remove("pop");
+        if (show) {
+          card.classList.add("is-in");
+          card.style.setProperty("--stagger", `${Math.min(i++, 8) * 0.07}s`);
+          void card.offsetWidth;
+          card.classList.add("pop");
+        }
+      });
+      grid.classList.remove("is-filtering");
+    };
+    if (reduce) return apply();
+    grid.classList.add("is-filtering");
+    setTimeout(apply, 260);
   }));
 
   // 상세 팝업
@@ -108,14 +127,72 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // 스크롤 등장 효과
+  // 순차 등장: 같은 부모 안의 .reveal 형제끼리 0.12초씩 늦게
   const items = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window) {
+  items.forEach((el) => {
+    const sibs = [...el.parentElement.children].filter((c) => c.classList.contains("reveal"));
+    const i = sibs.indexOf(el);
+    if (sibs.length > 1 && i > 0) el.style.setProperty("--stagger", `${Math.min(i, 6) * 0.12}s`);
+  });
+
+  // 숫자 카운트업
+  const countUp = (el) => {
+    const end = Number(el.dataset.count), suffix = el.dataset.suffix || "";
+    if (reduce) { el.textContent = end + suffix; return; }
+    const dur = 1600, t0 = performance.now();
+    const tick = (now) => {
+      const p = Math.min((now - t0) / dur, 1);
+      el.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  // 스크롤 등장 감지
+  const onIn = (el) => {
+    el.classList.add("is-in");
+    el.querySelectorAll("[data-count]").forEach(countUp);
+  };
+  if ("IntersectionObserver" in window && !reduce) {
+    document.querySelectorAll("[data-count]").forEach((el) => { el.textContent = "0" + (el.dataset.suffix || ""); });
     const io = new IntersectionObserver((entries) => entries.forEach((en) => {
-      if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
-    }), { threshold: 0.12 });
+      if (en.isIntersecting) { onIn(en.target); io.unobserve(en.target); }
+    }), { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
     items.forEach((el) => io.observe(el));
   } else {
     items.forEach((el) => el.classList.add("is-in"));
   }
+
+  // 스크롤 진행 바 · 헤더 상태 · 패럴랙스
+  const bar = document.createElement("div");
+  bar.className = "progress";
+  bar.setAttribute("aria-hidden", "true");
+  document.body.appendChild(bar);
+  const parallax = reduce ? [] : [...document.querySelectorAll("[data-parallax]")];
+  let lastY = window.scrollY, ticking = false;
+  const update = () => {
+    const y = window.scrollY, vh = window.innerHeight;
+    const max = document.documentElement.scrollHeight - vh;
+    bar.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+    if (header) {
+      header.classList.toggle("is-solid", y > 40);
+      const menuOpen = header.classList.contains("menu-open");
+      header.classList.toggle("is-hidden", !menuOpen && y > 400 && y > lastY + 2);
+      if (y < lastY - 2) header.classList.remove("is-hidden");
+    }
+    parallax.forEach((img) => {
+      const r = img.parentElement.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) return;
+      const offset = (r.top + r.height / 2 - vh / 2) * -0.12;
+      img.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
+    });
+    lastY = y;
+    ticking = false;
+  };
+  window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  window.addEventListener("resize", update);
+  update();
+
+  // 맨 위로
+  document.querySelectorAll(".to-top").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }); }));
 });
