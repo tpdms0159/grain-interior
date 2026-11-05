@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>견적문의 | 그레인 인테리어</title>
+  <meta name="description" content="업종, 면적, 오픈 희망일을 남겨 주시면 1영업일 안에 예상 일정과 견적 범위를 안내합니다. (포트폴리오용 가상 업체)" />
+  <meta property="og:title" content="견적문의 | 그레인 인테리어" />
+  <meta property="og:description" content="업종, 면적, 오픈 희망일을 남겨 주시면 1영업일 안에 예상 일정과 견적 범위를 안내합니다. (포트폴리오용 가상 업체)" />
+  <meta property="og:image" content="https://tpdms0159.github.io/grain-interior/assets/img/cafe.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tpdms0159.github.io/grain-interior/contact.html" />
+  <meta name="theme-color" content="#f6f5f2" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%232f4a3f'/%3E%3Cpath d='M16 22h32M16 32h32M16 42h32' stroke='%23b08d57' stroke-width='4'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="그레인 인테리어 홈">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span>GRAIN<small>그레인 인테리어</small></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="주요 메뉴">
+        <a href="about.html">회사소개</a>
+        <a href="works.html">시공사례</a>
+        <a href="service.html">서비스</a>
+        <a href="contact.html" aria-current="page" class="btn btn--green btn--sm">견적 문의</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1>견적 문의</h1>
+        <p>아래 내용을 남겨 주시면 1영업일 안에 담당자가 연락드립니다. 아직 정해지지 않은 항목은 비워 두셔도 됩니다.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact">
+        <form class="form reveal" id="quoteForm" novalidate>
+          <div class="form__body">
+            <fieldset class="field-input">
+              <legend>업종 <em>*</em></legend>
+              <div class="chips">
+                <label><input type="radio" name="type" value="카페·식당" required /><span>카페·식당</span></label>
+                <label><input type="radio" name="type" value="오피스" /><span>오피스</span></label>
+                <label><input type="radio" name="type" value="병원·클리닉" /><span>병원·클리닉</span></label>
+                <label><input type="radio" name="type" value="매장·스튜디오" /><span>매장·스튜디오</span></label>
+                <label><input type="radio" name="type" value="기타" /><span>기타</span></label>
+              </div>
+            </fieldset>
+            <div class="form__row">
+              <div class="field-input"><label for="name">이름 / 상호 <em>*</em></label><input id="name" name="name" required autocomplete="name" placeholder="홍길동 / 그레인카페" /></div>
+              <div class="field-input"><label for="phone">연락처 <em>*</em></label><input id="phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="010-0000-0000" /></div>
+            </div>
+            <div class="form__row">
+              <div class="field-input"><label for="area">면적</label>
+                <select id="area" name="area"><option value="">선택</option><option>20평 이하</option><option>20~40평</option><option>40~70평</option><option>70평 이상</option><option>잘 모르겠음</option></select></div>
+              <div class="field-input"><label for="openDate">오픈 희망일</label><input id="openDate" name="openDate" type="date" /></div>
+            </div>
+            <div class="form__row">
+              <div class="field-input"><label for="budget">예상 예산</label>
+                <select id="budget" name="budget"><option value="">선택</option><option>5천만 원 이하</option><option>5천만 ~ 1억 원</option><option>1억 ~ 2억 원</option><option>2억 원 이상</option><option>상담 후 결정</option></select></div>
+              <div class="field-input"><label for="loc">현장 위치</label><input id="loc" name="loc" placeholder="예) 서울 마포구 망원동" /></div>
+            </div>
+            <div class="field-input"><label for="memo">문의 내용</label><textarea id="memo" name="memo" placeholder="임대 계약 여부, 원하는 분위기, 참고 사진 링크 등을 자유롭게 적어 주세요."></textarea></div>
+            <label class="agree"><input type="checkbox" required /> <span>상담을 위한 개인정보(이름, 연락처) 수집·이용에 동의합니다. 수집된 정보는 상담 완료 후 1년간 보관됩니다.</span></label>
+            <button type="submit" class="btn btn--green">견적 문의 보내기</button>
+            <p class="demo-note">포트폴리오 데모 페이지로, 입력한 내용은 실제로 전송되지 않습니다.</p>
+          </div>
+          <div class="form__done" role="status">
+            <h3>문의가 접수되었습니다</h3>
+            <p>1영업일 안에 담당자가 연락드리겠습니다.<br />(데모 페이지라 실제로는 전송되지 않았습니다.)</p>
+          </div>
+        </form>
+
+        <aside class="side-info reveal">
+          <div><h3>전화 상담</h3><p class="big">02-336-0000</p><p>평일 09:00 – 18:00</p></div>
+          <div><h3>이메일</h3><p>hello@grain-interior.example</p></div>
+          <div><h3>문의 후 진행 순서</h3>
+            <ol><li>담당자 연락 (1영업일 이내)</li><li>예상 일정·예산 범위 안내</li><li>현장 실측 일정 예약</li><li>설계·공정별 견적서 전달</li></ol></div>
+          <div><h3>방문 상담</h3><p>서울 마포구 월드컵로 00, 3층<br />자재 샘플을 보며 상담하실 수 있습니다. (예약제)</p></div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="index.html" class="logo"><span class="logo__mark" aria-hidden="true"></span><span>GRAIN<small>그레인 인테리어</small></span></a>
+        <nav class="footer__nav" aria-label="하단 메뉴">
+          <a href="about.html">회사소개</a><a href="works.html">시공사례</a><a href="service.html">서비스</a><a href="contact.html">견적문의</a>
+        </nav>
+      </div>
+      <div class="footer__info">
+        <span>그레인 인테리어</span><i class="sep">|</i><span>대표 한지우</span><i class="sep">|</i><span>사업자등록번호 000-00-00000</span><br />
+        <span>서울특별시 마포구 월드컵로 00, 3층</span><i class="sep">|</i><span>T. 02-336-0000</span><i class="sep">|</i><span>hello@grain-interior.example</span>
+        <p class="footer__copy">이 사이트는 홈페이지 제작 포트폴리오용 가상 업체이며, 사진은 AI로 생성한 이미지입니다. © 2026 GRAIN Interior</p>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mobile-bar" aria-label="빠른 문의">
+    <a href="tel:023360000">전화</a>
+    <a href="#" onclick="alert('포트폴리오 데모: 카카오톡 채널 연결 자리입니다.');return false;">카카오톡</a>
+    <a href="contact.html">견적 문의</a>
+  </nav>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>시공사례 | 그레인 인테리어</title>
+  <meta name="description" content="카페·식당, 오피스, 병원·클리닉, 매장·스튜디오 시공사례. 면적·기간·공사비를 함께 공개합니다. (포트폴리오용 가상 업체)" />
+  <meta property="og:title" content="시공사례 | 그레인 인테리어" />
+  <meta property="og:description" content="카페·식당, 오피스, 병원·클리닉, 매장·스튜디오 시공사례. 면적·기간·공사비를 함께 공개합니다. (포트폴리오용 가상 업체)" />
+  <meta property="og:image" content="https://tpdms0159.github.io/grain-interior/assets/img/cafe.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tpdms0159.github.io/grain-interior/works.html" />
+  <meta name="theme-color" content="#f6f5f2" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%232f4a3f'/%3E%3Cpath d='M16 22h32M16 32h32M16 42h32' stroke='%23b08d57' stroke-width='4'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo" aria-label="그레인 인테리어 홈">
+        <span class="logo__mark" aria-hidden="true"></span>
+        <span>GRAIN<small>그레인 인테리어</small></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="주요 메뉴">
+        <a href="about.html">회사소개</a>
+        <a href="works.html" aria-current="page">시공사례</a>
+        <a href="service.html">서비스</a>
+        <a href="contact.html" class="btn btn--green btn--sm">견적 문의</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Works</p>
+        <h1>시공사례</h1>
+        <p>업종별로 사례를 골라 보세요. 사진을 누르면 면적, 공사 기간, 공사비와 시공 포인트를 볼 수 있습니다.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filters" role="group" aria-label="업종 필터">
+          <button type="button" class="filter" data-filter="전체" aria-pressed="true">전체</button>
+          <button type="button" class="filter" data-filter="카페·식당" aria-pressed="false">카페·식당</button>
+          <button type="button" class="filter" data-filter="오피스" aria-pressed="false">오피스</button>
+          <button type="button" class="filter" data-filter="병원·클리닉" aria-pressed="false">병원·클리닉</button>
+          <button type="button" class="filter" data-filter="매장·스튜디오" aria-pressed="false">매장·스튜디오</button>
+        </div>
+        <div class="work-grid" id="workGrid"></div>
+      </div>
+    </section>
+
+  <section class="cta">
+    <img src="assets/img/restaurant.jpg" alt="" loading="lazy" />
+    <div class="container">
+      <div>
+        <h2>오픈 날짜가 정해졌다면,<br />공사 일정부터 맞춰 보세요.</h2>
+        <p>평수와 업종, 오픈 희망일만 알려주시면 1영업일 안에 예상 일정과 견적 범위를 안내합니다.</p>
+      </div>
+      <div class="cta__actions">
+        <a href="contact.html" class="btn btn--white">견적 문의하기</a>
+        <a href="tel:023360000" class="btn btn--ghost-white">02-336-0000</a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <div class="modal" id="workModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal__panel"></div></div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <a href="index.html" class="logo"><span class="logo__mark" aria-hidden="true"></span><span>GRAIN<small>그레인 인테리어</small></span></a>
+        <nav class="footer__nav" aria-label="하단 메뉴">
+          <a href="about.html">회사소개</a><a href="works.html">시공사례</a><a href="service.html">서비스</a><a href="contact.html">견적문의</a>
+        </nav>
+      </div>
+      <div class="footer__info">
+        <span>그레인 인테리어</span><i class="sep">|</i><span>대표 한지우</span><i class="sep">|</i><span>사업자등록번호 000-00-00000</span><br />
+        <span>서울특별시 마포구 월드컵로 00, 3층</span><i class="sep">|</i><span>T. 02-336-0000</span><i class="sep">|</i><span>hello@grain-interior.example</span>
+        <p class="footer__copy">이 사이트는 홈페이지 제작 포트폴리오용 가상 업체이며, 사진은 AI로 생성한 이미지입니다. © 2026 GRAIN Interior</p>
+      </div>
+    </div>
+  </footer>
+
+  <nav class="mobile-bar" aria-label="빠른 문의">
+    <a href="tel:023360000">전화</a>
+    <a href="#" onclick="alert('포트폴리오 데모: 카카오톡 채널 연결 자리입니다.');return false;">카카오톡</a>
+    <a href="contact.html">견적 문의</a>
+  </nav>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>
