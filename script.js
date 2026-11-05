@@ -1,3 +1,5 @@
+const TYPE_EN = { "카페·식당": "Cafe & Dining", "오피스": "Office", "병원·클리닉": "Clinic", "매장·스튜디오": "Retail & Studio" };
+
 // 시공사례 데이터 (가상 사례)
 const WORKS = [
   { id: "mangwon-cafe", type: "카페·식당", title: "망원동 스페셜티 카페", img: "cafe", area: "24평", period: "4주", cost: "6,800만 원", loc: "서울 마포구",
@@ -43,8 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
     grid.innerHTML = WORKS.slice(0, limit).map((w) => `
       <button type="button" class="work reveal" data-id="${w.id}" data-type="${w.type}">
         <div class="work__img"><img src="assets/img/${w.img}.jpg" alt="${w.title} 시공 사진" loading="lazy" width="800" height="600"></div>
-        <div class="work__meta"><span class="tag">${w.type}</span><span>${w.area} · ${w.period}</span></div>
+        <div class="work__meta">${TYPE_EN[w.type]}</div>
         <h3>${w.title}</h3>
+        <p>${w.area} · ${w.period} 시공</p>
       </button>`).join("");
   }
 
@@ -72,11 +75,11 @@ document.addEventListener("DOMContentLoaded", () => {
       panel.innerHTML = `
         <img src="assets/img/${w.img}.jpg" alt="${w.title} 시공 사진">
         <div class="modal__body">
-          <span class="tag">${w.type}</span>
+          <div class="work__meta">${TYPE_EN[w.type]} · ${w.type}</div>
           <h3 id="modalTitle">${w.title}</h3>
           <dl><dt>위치</dt><dd>${w.loc}</dd><dt>면적</dt><dd>${w.area}</dd><dt>공사 기간</dt><dd>${w.period}</dd><dt>공사비</dt><dd>${w.cost} (VAT 별도)</dd></dl>
           <ul>${w.points.map((p) => `<li>${p}</li>`).join("")}</ul>
-          <a class="btn btn--green" href="contact.html?type=${encodeURIComponent(w.type)}">비슷한 공간 견적 문의</a>
+          <a class="btn btn--dark" href="contact.html?type=${encodeURIComponent(w.type)}">비슷한 공간 견적 문의</a>
         </div>
         <button type="button" class="modal__close" aria-label="닫기">×</button>`;
       modal.classList.add("is-open");

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -6 64 64" role="img" aria-label="GRAIN Interior">
+  <rect x="-10" y="-6" width="64" height="64" rx="12" fill="#F9F8F6"/>
+  <path d="M0 56V22A22 22 0 0 1 44 22V56Z" fill="#222222"/>
+  <g fill="none" stroke="#A68A64" stroke-width="2.6" stroke-linecap="round">
+    <path d="M9 29C16 25.5 26 32.5 35 29"/><path d="M9 38C16 34.5 26 41.5 35 38"/><path d="M9 47C16 43.5 26 50.5 35 47"/>
+  </g>
+</svg>

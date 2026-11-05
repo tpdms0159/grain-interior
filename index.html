@@ -10,24 +10,28 @@
   <meta property="og:image" content="https://tpdms0159.github.io/grain-interior/assets/img/cafe.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tpdms0159.github.io/grain-interior/" />
-  <meta name="theme-color" content="#f6f5f2" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%232f4a3f'/%3E%3Cpath d='M16 22h32M16 32h32M16 42h32' stroke='%23b08d57' stroke-width='4'/%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
   <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo" aria-label="그레인 인테리어 홈">
-        <span class="logo__mark" aria-hidden="true"></span>
-        <span>GRAIN<small>그레인 인테리어</small></span>
-      </a>
+      <a href="index.html" class="logo" aria-label="그레인 인테리어 홈"><img src="assets/logo/grain-logo.svg" alt="GRAIN 그레인 인테리어" width="190" height="60" /></a>
       <nav class="nav" id="nav" aria-label="주요 메뉴">
-        <a href="about.html">회사소개</a>
-        <a href="works.html">시공사례</a>
-        <a href="service.html">서비스</a>
-        <a href="contact.html" class="btn btn--green btn--sm">견적 문의</a>
+        <a href="about.html">About<small>회사소개</small></a>
+        <a href="works.html">Works<small>시공사례</small></a>
+        <a href="service.html">Service<small>서비스</small></a>
+        <a href="contact.html">Contact<small>견적문의</small></a>
       </nav>
+      <div class="header__side">
+        <a class="header__tel" href="tel:023360000">02-336-0000</a>
+        <a class="btn btn--dark btn--plain" href="contact.html">견적 문의</a>
+      </div>
       <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
     </div>
   </header>
@@ -35,114 +39,115 @@
   <main>
     <section class="hero">
       <img class="hero__img" src="assets/img/cafe.jpg" alt="그레인 인테리어가 시공한 카페 내부" fetchpriority="high" />
-      <div class="container hero__content">
-        <h1>오픈 날짜에 맞춰 끝내는<br />상업공간 인테리어</h1>
-        <p>카페, 오피스, 병원, 매장. 공사 기간을 계약서에 적고, 그 날짜를 지킵니다.</p>
+      <div class="hero__content">
+        <h1>Spaces that<br />open on time.</h1>
+        <p>카페 · 오피스 · 병원 · 매장. 공사 기간을 계약서에 적고,<br /><strong>오픈 날짜에 맞춰</strong> 끝내는 상업공간 인테리어입니다.</p>
         <div class="hero__actions">
-          <a href="contact.html" class="btn btn--white">견적 문의</a>
-          <a href="works.html" class="btn btn--ghost-white">시공사례 보기</a>
+          <a href="works.html" class="btn btn--white">시공사례 보기</a>
+          <a href="contact.html" class="btn btn--ghost">견적 문의</a>
         </div>
       </div>
+      <span class="hero__scroll">SCROLL</span>
     </section>
-
-    <div class="stats">
-      <div class="stat"><strong>320+</strong><span>상업공간 시공</span></div>
-      <div class="stat"><strong>98%</strong><span>계약 기간 내 준공</span></div>
-      <div class="stat"><strong>12년</strong><span>상업공간 시공 경력</span></div>
-      <div class="stat"><strong>1영업일</strong><span>문의 후 첫 답변</span></div>
-    </div>
 
     <section class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <p class="eyebrow">Fields</p>
-            <h2 class="h2">업종마다 필요한 설비가 다릅니다</h2>
-            <p class="lead">주방 덕트, 의료기기 전기 용량, 사무실 네트워크까지. 업종별로 놓치기 쉬운 부분을 설계 단계에서 먼저 확인합니다.</p>
-          </div>
-          <a href="service.html" class="btn btn--line">서비스 자세히 보기</a>
-        </div>
-        <div class="field-grid">
-          <a class="field reveal" href="works.html"><img src="assets/img/bakery.jpg" alt="베이커리 카페 시공 사례" loading="lazy" /><div class="field__body"><h3>카페·식당</h3><p>주방 동선, 덕트·급배수, 영업 신고</p></div></a>
-          <a class="field reveal" href="works.html"><img src="assets/img/office.jpg" alt="사무실 시공 사례" loading="lazy" /><div class="field__body"><h3>오피스</h3><p>좌석 배치, 회의실 방음, 네트워크</p></div></a>
-          <a class="field reveal" href="works.html"><img src="assets/img/clinic.jpg" alt="피부과 의원 시공 사례" loading="lazy" /><div class="field__body"><h3>병원·클리닉</h3><p>진료 동선, 의료기기 설비, 개설 신고</p></div></a>
-          <a class="field reveal" href="works.html"><img src="assets/img/boutique.jpg" alt="편집숍 시공 사례" loading="lazy" /><div class="field__body"><h3>매장·스튜디오</h3><p>진열·조명, 파사드, 차음·방수</p></div></a>
-        </div>
+      <div class="container head-center reveal">
+        <span class="label">Fields</span>
+        <h2 class="title">업종마다 필요한 설비가 다릅니다</h2>
+        <p class="desc">주방 덕트, 의료기기 전기 용량, 사무실 네트워크까지.<br />업종별로 놓치기 쉬운 부분을 <strong>설계 단계에서 먼저</strong> 확인합니다.</p>
       </div>
-    </section>
-
-    <section class="section section--green">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <p class="eyebrow">Promise</p>
-            <h2 class="h2">사장님이 걱정하는 세 가지를 계약서에 넣었습니다</h2>
-          </div>
-        </div>
-        <div class="promise-grid reveal">
-          <div class="promise"><b>01</b><h3>공사 기간 명시</h3><p>준공일을 계약서에 적고, 저희 사정으로 늦어지면 하루 단위로 보상합니다.</p></div>
-          <div class="promise"><b>02</b><h3>추가금 사전 합의</h3><p>견적서는 공정별로 나눠 드리고, 변경이 생기면 착수 전에 금액을 먼저 합의합니다.</p></div>
-          <div class="promise"><b>03</b><h3>인허가·소방 대행</h3><p>영업 신고, 의료기관 개설, 소방 완비증명에 필요한 도면과 서류를 준비합니다.</p></div>
-        </div>
+      <div class="keywords">
+        <a class="kw reveal" href="works.html"><div class="kw__img"><img src="assets/img/bakery.jpg" alt="베이커리 카페 시공 사례" loading="lazy" /></div><h3>CAFE</h3><p>주방 동선 · 덕트 · 급배수<br />영업 신고까지</p></a>
+        <a class="kw reveal" href="works.html"><div class="kw__img"><img src="assets/img/office.jpg" alt="사무실 시공 사례" loading="lazy" /></div><h3>OFFICE</h3><p>좌석 배치 · 회의실 방음<br />네트워크 배선</p></a>
+        <a class="kw reveal" href="works.html"><div class="kw__img"><img src="assets/img/clinic.jpg" alt="피부과 의원 시공 사례" loading="lazy" /></div><h3>CLINIC</h3><p>진료 동선 · 의료기기 설비<br />개설 신고 지원</p></a>
+        <a class="kw reveal" href="works.html"><div class="kw__img"><img src="assets/img/boutique.jpg" alt="편집숍 시공 사례" loading="lazy" /></div><h3>RETAIL</h3><p>진열 · 조명 · 파사드<br />차음 · 방수</p></a>
       </div>
     </section>
 
     <section class="section section--white">
       <div class="container">
-        <div class="section-head reveal">
+        <div class="numbers reveal">
+          <div class="num"><strong>320+</strong><span>상업공간 시공</span></div>
+          <div class="num"><strong>98%</strong><span>계약 기간 내 준공</span></div>
+          <div class="num"><strong>12 yrs</strong><span>상업공간 시공 경력</span></div>
+          <div class="num"><strong>1 day</strong><span>문의 후 첫 답변</span></div>
+        </div>
+        <div class="about-row reveal" style="margin-top:96px">
+          <span class="big-en">About</span>
           <div>
-            <p class="eyebrow">Works</p>
-            <h2 class="h2">최근 시공사례</h2>
-            <p class="lead">면적, 공사 기간, 공사비를 함께 공개합니다.</p>
+            <h2>공사가 하루 늦어지면, 사장님의 임대료가 나갑니다</h2>
+            <p>그래서 저희는 디자인만큼 일정 관리에 시간을 씁니다. 설계 단계에서 설비와 인허가 조건을 먼저 확인하고, 날짜 단위 공정표를 계약서에 붙입니다.</p>
+            <a href="about.html" class="btn btn--line">View more</a>
           </div>
-          <a href="works.html" class="btn btn--line">전체 사례 보기</a>
+        </div>
+        <div class="icons">
+          <div class="ico reveal"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="7" width="24" height="21" rx="1"/><path d="M4 13h24M10 3v7M22 3v7M11 20l3 3 7-7"/></svg><h3>공사 기간 명시</h3><p>준공일을 계약서에 적고, 저희 사정으로 늦어지면<br />하루 단위로 보상합니다.</p></div>
+          <div class="ico reveal"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M7 3h13l5 5v21H7z"/><path d="M20 3v5h5M11 15h10M11 20h10M11 25h6"/></svg><h3>추가금 사전 합의</h3><p>견적서는 공정별로 나눠 드리고, 변경이 생기면<br />착수 전에 금액을 먼저 합의합니다.</p></div>
+          <div class="ico reveal"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="13" r="8"/><path d="M12 13l3 3 5-6M10 20l-3 9 9-4 9 4-3-9"/></svg><h3>인허가 · 소방 대행</h3><p>영업 신고, 의료기관 개설, 소방 완비증명에<br />필요한 도면과 서류를 준비합니다.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner">
+      <img src="assets/img/lounge.jpg" alt="" loading="lazy" />
+      <div class="container reveal">
+        <span class="label">Service</span>
+        <h2>공정별 견적과 <b>날짜 단위 공정표.</b><br />추가금 걱정 없이 <b>오픈을 준비</b>하세요.</h2>
+        <p>상담부터 설계, 시공, 인허가 서류까지 한 팀이 진행합니다.</p>
+        <a href="service.html" class="btn btn--white">Service</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="head-center reveal">
+          <span class="label">Works</span>
+          <h2 class="title">최근 시공사례</h2>
+          <p class="desc">면적, 공사 기간, 공사비를 <strong>함께 공개</strong>합니다.</p>
         </div>
         <div class="work-grid" id="workGrid" data-limit="3"></div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <p class="eyebrow">Process</p>
-            <h2 class="h2">문의부터 오픈까지</h2>
-          </div>
-          <a href="service.html#process" class="btn btn--line">진행 과정 자세히</a>
-        </div>
-        <div class="steps">
-          <div class="step reveal"><b>STEP 01</b><h3>상담·현장 실측</h3><p>업종, 예산, 오픈 희망일을 듣고 현장을 실측합니다.</p></div>
-          <div class="step reveal"><b>STEP 02</b><h3>설계·견적</h3><p>평면·3D 도면과 공정별 견적서를 드립니다.</p></div>
-          <div class="step reveal"><b>STEP 03</b><h3>계약·시공</h3><p>준공일을 명시해 계약하고, 매주 공정 사진을 보내드립니다.</p></div>
-          <div class="step reveal"><b>STEP 04</b><h3>준공·사후관리</h3><p>인허가 서류 전달 후, 1년간 무상 A/S를 진행합니다.</p></div>
-        </div>
+        <div style="text-align:center;margin-top:64px"><a href="works.html" class="btn btn--line">전체 사례 보기</a></div>
       </div>
     </section>
 
     <section class="section section--white">
       <div class="container">
-        <div class="section-head reveal"><div><p class="eyebrow">Reviews</p><h2 class="h2">맡겨 주신 분들의 이야기</h2></div></div>
-        <div class="reviews">
-          <article class="review reveal"><p>임대 계약 후 오픈까지 6주밖에 없었는데, 야간 공사로 일정을 맞춰 주셨어요. 매주 사진으로 진행 상황을 받아서 따로 현장에 갈 일이 거의 없었습니다.</p><footer><strong>망원동 카페 대표</strong>24평 · 4주 시공</footer></article>
-          <article class="review reveal"><p>의료기기 업체와 전기 용량을 직접 맞춰 주셔서 개원 직전에 생기는 문제가 없었습니다. 보건소 서류까지 챙겨 주셔서 진료 준비에만 집중했어요.</p><footer><strong>판교 피부과 원장</strong>48평 · 6주 시공</footer></article>
-          <article class="review reveal"><p>견적서가 공정별로 나뉘어 있어서 비교하기 쉬웠고, 공사 중 추가된 항목도 미리 금액을 알려 주셔서 정산할 때 다툼이 없었습니다.</p><footer><strong>성수동 스타트업 운영팀</strong>65평 · 5주 시공</footer></article>
+        <div class="head-row reveal">
+          <div><span class="label">Process</span><h2 class="title">문의부터 오픈까지</h2></div>
+          <a href="service.html#process" class="btn btn--line">진행 과정 자세히</a>
+        </div>
+        <div class="steps steps--4">
+          <div class="step reveal"><b>STEP 01</b><h3>상담 · 현장 실측</h3><p>업종, 예산, 오픈 희망일을 듣고 현장을 실측합니다.</p></div>
+          <div class="step reveal"><b>STEP 02</b><h3>설계 · 견적</h3><p>평면·3D 도면과 공정별 견적서를 드립니다.</p></div>
+          <div class="step reveal"><b>STEP 03</b><h3>계약 · 시공</h3><p>준공일을 명시해 계약하고, 매주 공정 사진을 보내드립니다.</p></div>
+          <div class="step reveal"><b>STEP 04</b><h3>준공 · 사후관리</h3><p>인허가 서류 전달 후, 1년간 무상 A/S를 진행합니다.</p></div>
         </div>
       </div>
     </section>
 
-  <section class="cta">
-    <img src="assets/img/restaurant.jpg" alt="" loading="lazy" />
-    <div class="container">
-      <div>
-        <h2>오픈 날짜가 정해졌다면,<br />공사 일정부터 맞춰 보세요.</h2>
-        <p>평수와 업종, 오픈 희망일만 알려주시면 1영업일 안에 예상 일정과 견적 범위를 안내합니다.</p>
+    <section class="section">
+      <div class="container">
+        <div class="head-center reveal"><span class="label">Reviews</span><h2 class="title">맡겨 주신 분들의 이야기</h2></div>
+        <div class="reviews">
+          <article class="review reveal"><span class="quote">“</span><p>임대 계약 후 오픈까지 6주밖에 없었는데, 야간 공사로 일정을 맞춰 주셨어요. 매주 사진으로 진행 상황을 받아서 따로 현장에 갈 일이 거의 없었습니다.</p><footer><strong>망원동 카페 대표</strong>24평 · 4주 시공</footer></article>
+          <article class="review reveal"><span class="quote">“</span><p>의료기기 업체와 전기 용량을 직접 맞춰 주셔서 개원 직전에 생기는 문제가 없었습니다. 보건소 서류까지 챙겨 주셔서 진료 준비에만 집중했어요.</p><footer><strong>판교 피부과 원장</strong>48평 · 6주 시공</footer></article>
+          <article class="review reveal"><span class="quote">“</span><p>견적서가 공정별로 나뉘어 있어서 비교하기 쉬웠고, 공사 중 추가된 항목도 미리 금액을 알려 주셔서 정산할 때 다툼이 없었습니다.</p><footer><strong>성수동 스타트업 운영팀</strong>65평 · 5주 시공</footer></article>
+        </div>
       </div>
-      <div class="cta__actions">
-        <a href="contact.html" class="btn btn--white">견적 문의하기</a>
-        <a href="tel:023360000" class="btn btn--ghost-white">02-336-0000</a>
+    </section>
+
+    <section class="section section--white">
+      <div class="container split-contact">
+        <div class="reveal">
+          <span class="label">Contact</span>
+          <h2 class="big-en">Let's Talk<br />About Space</h2>
+          <p>오픈 날짜가 정해졌다면, 공사 일정부터 맞춰 보세요.<br />업종과 면적, 오픈 희망일만 알려주시면<br /><strong>1영업일 안에</strong> 예상 일정과 견적 범위를 안내합니다.</p>
+          <div class="actions"><a href="contact.html" class="btn btn--dark">견적 문의</a><a href="tel:023360000" class="btn btn--line btn--plain">02-336-0000</a></div>
+          <img class="side-img" src="assets/img/studio.jpg" alt="자재 샘플과 도면" loading="lazy" />
+        </div>
+        <img class="main-img reveal" src="assets/img/pilates.jpg" alt="필라테스 스튜디오 시공 사례" loading="lazy" />
       </div>
-    </div>
-  </section>
+    </section>
   </main>
 
   <div class="modal" id="workModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal__panel"></div></div>
@@ -150,15 +155,18 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__top">
-        <a href="index.html" class="logo"><span class="logo__mark" aria-hidden="true"></span><span>GRAIN<small>그레인 인테리어</small></span></a>
-        <nav class="footer__nav" aria-label="하단 메뉴">
-          <a href="about.html">회사소개</a><a href="works.html">시공사례</a><a href="service.html">서비스</a><a href="contact.html">견적문의</a>
-        </nav>
+        <a href="index.html" class="footer__logo" aria-label="그레인 인테리어 홈"><img src="assets/logo/grain-logo-white.svg" alt="GRAIN 그레인 인테리어" width="190" height="60" /></a>
+        <div class="footer__col"><h4>About</h4><a href="about.html">회사소개</a><a href="about.html#team">팀 소개</a><a href="about.html#location">오시는 길</a></div>
+        <div class="footer__col"><h4>Service</h4><a href="works.html">시공사례</a><a href="service.html">서비스</a><a href="service.html#process">진행 과정</a></div>
+        <div class="footer__col"><h4>Contact</h4><a href="contact.html">견적 문의</a><a href="tel:023360000">02-336-0000</a><a href="mailto:hello@grain-interior.example">hello@grain-interior.example</a></div>
       </div>
-      <div class="footer__info">
-        <span>그레인 인테리어</span><i class="sep">|</i><span>대표 한지우</span><i class="sep">|</i><span>사업자등록번호 000-00-00000</span><br />
-        <span>서울특별시 마포구 월드컵로 00, 3층</span><i class="sep">|</i><span>T. 02-336-0000</span><i class="sep">|</i><span>hello@grain-interior.example</span>
-        <p class="footer__copy">이 사이트는 홈페이지 제작 포트폴리오용 가상 업체이며, 사진은 AI로 생성한 이미지입니다. © 2026 GRAIN Interior</p>
+      <div class="footer__bottom">
+        <div>
+          <span>그레인 인테리어</span><i class="sep"> | </i><span>대표 한지우</span><i class="sep"> | </i><span>사업자등록번호 000-00-00000</span><br />
+          <span>서울특별시 마포구 월드컵로 00, 3층</span><i class="sep"> | </i><span>평일 09:00 – 18:00</span>
+          <p class="footer__copy">이 사이트는 홈페이지 제작 포트폴리오용 가상 업체이며, 사진은 AI로 생성한 이미지입니다. © 2026 GRAIN Interior</p>
+        </div>
+        <a href="#" class="to-top" aria-label="맨 위로">↑</a>
       </div>
     </div>
   </footer>
@@ -169,6 +177,6 @@
     <a href="contact.html">견적 문의</a>
   </nav>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>

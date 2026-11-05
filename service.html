@@ -10,79 +10,78 @@
   <meta property="og:image" content="https://tpdms0159.github.io/grain-interior/assets/img/cafe.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tpdms0159.github.io/grain-interior/service.html" />
-  <meta name="theme-color" content="#f6f5f2" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%232f4a3f'/%3E%3Cpath d='M16 22h32M16 32h32M16 42h32' stroke='%23b08d57' stroke-width='4'/%3E%3C/svg%3E" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
-  <link rel="stylesheet" href="styles.css?v=2" />
+  <link rel="stylesheet" href="styles.css?v=3" />
 </head>
 <body>
   <header class="header">
     <div class="container header__inner">
-      <a href="index.html" class="logo" aria-label="그레인 인테리어 홈">
-        <span class="logo__mark" aria-hidden="true"></span>
-        <span>GRAIN<small>그레인 인테리어</small></span>
-      </a>
+      <a href="index.html" class="logo" aria-label="그레인 인테리어 홈"><img src="assets/logo/grain-logo.svg" alt="GRAIN 그레인 인테리어" width="190" height="60" /></a>
       <nav class="nav" id="nav" aria-label="주요 메뉴">
-        <a href="about.html">회사소개</a>
-        <a href="works.html">시공사례</a>
-        <a href="service.html" aria-current="page">서비스</a>
-        <a href="contact.html" class="btn btn--green btn--sm">견적 문의</a>
+        <a href="about.html">About<small>회사소개</small></a>
+        <a href="works.html">Works<small>시공사례</small></a>
+        <a href="service.html" aria-current="page">Service<small>서비스</small></a>
+        <a href="contact.html">Contact<small>견적문의</small></a>
       </nav>
+      <div class="header__side">
+        <a class="header__tel" href="tel:023360000">02-336-0000</a>
+        <a class="btn btn--dark btn--plain" href="contact.html">견적 문의</a>
+      </div>
       <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
     </div>
   </header>
 
   <main>
     <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">Service</p>
-        <h1>설계부터 인허가까지<br />한 팀이 진행합니다</h1>
-        <p>업종별 시공 범위와 진행 과정, 평수별 공사 기간을 확인해 보세요.</p>
-      </div>
+      <img src="assets/img/lounge.jpg" alt="" />
+      <div><span class="label">서비스</span><h1>Service</h1><p>설계부터 인허가까지 한 팀이 진행합니다.</p></div>
     </section>
+    <nav class="page-nav" aria-label="페이지 내 메뉴"><a href="#scope">시공 범위</a><a href="#process">진행 과정</a><a href="#schedule">공사 기간</a><a href="#faq">FAQ</a></nav>
 
-    <section class="section">
+    <section class="section" id="scope">
       <div class="container">
+        <div class="head-center reveal"><span class="label">Scope</span><h2 class="title">업종별 시공 범위</h2></div>
         <div class="svc reveal">
-          <img src="assets/img/restaurant.jpg" alt="한식 다이닝 홀 시공 사진" loading="lazy" />
-          <div><h3>카페·식당</h3><p>주방 동선과 설비를 먼저 정하고, 그 위에 홀 디자인을 얹습니다.</p>
-            <ul><li>주방 레이아웃·덕트 설계</li><li>급배수·그리스트랩</li><li>전기 증설·가스 배관</li><li>카운터·쇼케이스 제작</li><li>영업 신고·소방 완비증명</li><li>간판·파사드</li></ul></div>
+          <div class="svc__img"><img src="assets/img/restaurant.jpg" alt="한식 다이닝 홀 시공 사진" loading="lazy" /></div>
+          <div><span class="en-title">Cafe &amp; Dining</span><h3>카페 · 식당</h3><p>주방 동선과 설비를 먼저 정하고, 그 위에 홀 디자인을 얹습니다.</p><ul><li>주방 레이아웃·덕트 설계</li><li>급배수·그리스트랩</li><li>전기 증설·가스 배관</li><li>카운터·쇼케이스 제작</li><li>영업 신고·소방 완비증명</li><li>간판·파사드</li></ul></div>
         </div>
         <div class="svc reveal">
-          <img src="assets/img/lounge.jpg" alt="오피스 라운지 시공 사진" loading="lazy" />
-          <div><h3>오피스</h3><p>인원과 업무 방식에 맞춰 좌석, 회의실, 휴게 공간을 배치합니다.</p>
-            <ul><li>좌석·회의실 배치 계획</li><li>유리 파티션·방음</li><li>네트워크·전기 배선</li><li>탕비실·라운지</li><li>가구·조명 구매 대행</li><li>주말·야간 이전 공사</li></ul></div>
+          <div class="svc__img"><img src="assets/img/lounge.jpg" alt="오피스 라운지 시공 사진" loading="lazy" /></div>
+          <div><span class="en-title">Office</span><h3>오피스</h3><p>인원과 업무 방식에 맞춰 좌석, 회의실, 휴게 공간을 배치합니다.</p><ul><li>좌석·회의실 배치 계획</li><li>유리 파티션·방음</li><li>네트워크·전기 배선</li><li>탕비실·라운지</li><li>가구·조명 구매 대행</li><li>주말·야간 이전 공사</li></ul></div>
         </div>
         <div class="svc reveal">
-          <img src="assets/img/dental.jpg" alt="치과 진료 복도 시공 사진" loading="lazy" />
-          <div><h3>병원·클리닉</h3><p>환자 동선과 의료기기 조건을 의료진, 기기 업체와 함께 맞춥니다.</p>
-            <ul><li>접수·대기·진료 동선 설계</li><li>의료기기 전기·배관</li><li>X-ray실 방사선 차폐</li><li>감염 관리 마감재</li><li>의료기관 개설 신고 지원</li><li>무장애 출입구</li></ul></div>
+          <div class="svc__img"><img src="assets/img/dental.jpg" alt="치과 진료 복도 시공 사진" loading="lazy" /></div>
+          <div><span class="en-title">Clinic</span><h3>병원 · 클리닉</h3><p>환자 동선과 의료기기 조건을 의료진, 기기 업체와 함께 맞춥니다.</p><ul><li>접수·대기·진료 동선 설계</li><li>의료기기 전기·배관</li><li>X-ray실 방사선 차폐</li><li>감염 관리 마감재</li><li>의료기관 개설 신고 지원</li><li>무장애 출입구</li></ul></div>
         </div>
         <div class="svc reveal">
-          <img src="assets/img/pilates.jpg" alt="필라테스 스튜디오 시공 사진" loading="lazy" />
-          <div><h3>매장·스튜디오</h3><p>상품과 브랜드가 잘 보이도록 진열, 조명, 외관을 함께 계획합니다.</p>
-            <ul><li>진열 집기 제작</li><li>트랙·디스플레이 조명</li><li>파사드·간판</li><li>바닥 보강·차음</li><li>탈의실·샤워실 방수</li><li>브랜드 컬러 적용</li></ul></div>
+          <div class="svc__img"><img src="assets/img/pilates.jpg" alt="필라테스 스튜디오 시공 사진" loading="lazy" /></div>
+          <div><span class="en-title">Retail &amp; Studio</span><h3>매장 · 스튜디오</h3><p>상품과 브랜드가 잘 보이도록 진열, 조명, 외관을 함께 계획합니다.</p><ul><li>진열 집기 제작</li><li>트랙·디스플레이 조명</li><li>파사드·간판</li><li>바닥 보강·차음</li><li>탈의실·샤워실 방수</li><li>브랜드 컬러 적용</li></ul></div>
         </div>
       </div>
     </section>
 
     <section class="section section--white" id="process">
       <div class="container">
-        <div class="section-head reveal"><div><p class="eyebrow">Process</p><h2 class="h2">진행 과정 6단계</h2><p class="lead">각 단계가 끝날 때마다 결과물을 문서로 드립니다.</p></div></div>
-        <div class="steps steps--6">
+        <div class="head-row reveal"><div><span class="label">Process</span><h2 class="title">진행 과정 6단계</h2><p class="desc">각 단계가 끝날 때마다 결과물을 문서로 드립니다.</p></div></div>
+        <div class="steps">
           <div class="step reveal"><b>STEP 01</b><h3>상담</h3><p>업종, 면적, 예산, 오픈 희망일을 확인합니다.</p><small>전화·방문 상담 무료</small></div>
           <div class="step reveal"><b>STEP 02</b><h3>현장 실측</h3><p>설비 상태, 전기 용량, 건물 관리 규정을 확인합니다.</p><small>실측 보고서 제공</small></div>
-          <div class="step reveal"><b>STEP 03</b><h3>설계·시안</h3><p>평면도와 3D 시안을 만들고 2회까지 수정합니다.</p><small>평면도 · 3D 이미지</small></div>
-          <div class="step reveal"><b>STEP 04</b><h3>견적·계약</h3><p>공정별 견적서와 날짜 단위 공정표를 첨부해 계약합니다.</p><small>공정별 견적서 · 공정표</small></div>
+          <div class="step reveal"><b>STEP 03</b><h3>설계 · 시안</h3><p>평면도와 3D 시안을 만들고 2회까지 수정합니다.</p><small>평면도 · 3D 이미지</small></div>
+          <div class="step reveal"><b>STEP 04</b><h3>견적 · 계약</h3><p>공정별 견적서와 날짜 단위 공정표를 첨부해 계약합니다.</p><small>공정별 견적서 · 공정표</small></div>
           <div class="step reveal"><b>STEP 05</b><h3>시공</h3><p>현장 소장이 매일 관리하고, 매주 공정 리포트를 보내드립니다.</p><small>주간 공정 리포트</small></div>
-          <div class="step reveal"><b>STEP 06</b><h3>준공·A/S</h3><p>최종 점검 후 인허가 서류를 전달하고 1년간 무상 A/S를 진행합니다.</p><small>준공 도서 · A/S 보증서</small></div>
+          <div class="step reveal"><b>STEP 06</b><h3>준공 · A/S</h3><p>최종 점검 후 인허가 서류를 전달하고 1년간 무상 A/S를 진행합니다.</p><small>준공 도서 · A/S 보증서</small></div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="schedule">
       <div class="container">
-        <div class="section-head reveal"><div><p class="eyebrow">Schedule</p><h2 class="h2">평수별 표준 공사 기간</h2><p class="lead">설계 확정 후 착공부터 준공까지의 기간입니다. 철거 범위와 설비 공사에 따라 달라질 수 있습니다.</p></div></div>
+        <div class="head-row reveal"><div><span class="label">Schedule</span><h2 class="title">평수별 표준 공사 기간</h2><p class="desc">설계 확정 후 착공부터 준공까지의 기간입니다. 철거 범위와 설비 공사에 따라 달라질 수 있습니다.</p></div></div>
         <div class="table-wrap reveal">
           <table>
             <thead><tr><th>면적</th><th>카페·식당</th><th>오피스</th><th>병원·클리닉</th><th>매장·스튜디오</th></tr></thead>
@@ -98,9 +97,9 @@
       </div>
     </section>
 
-    <section class="section section--white">
+    <section class="section section--white" id="faq">
       <div class="container">
-        <div class="section-head reveal"><div><p class="eyebrow">FAQ</p><h2 class="h2">자주 묻는 질문</h2></div></div>
+        <div class="head-center reveal"><span class="label">FAQ</span><h2 class="title">자주 묻는 질문</h2></div>
         <div class="faq reveal">
           <details><summary>임대 계약 전에도 상담할 수 있나요?</summary><p>네. 계약 전에 현장을 함께 보면 전기 용량, 덕트 경로, 건물 규정처럼 공사비에 영향을 주는 부분을 미리 확인할 수 있습니다. 계약 전 현장 동행은 무료입니다.</p></details>
           <details><summary>견적은 얼마나 걸리나요?</summary><p>현장 실측 후 3~5영업일 안에 공정별 견적서를 드립니다. 대략적인 예산 범위는 문의 후 1영업일 안에 안내합니다.</p></details>
@@ -112,33 +111,35 @@
       </div>
     </section>
 
-  <section class="cta">
-    <img src="assets/img/restaurant.jpg" alt="" loading="lazy" />
-    <div class="container">
-      <div>
-        <h2>오픈 날짜가 정해졌다면,<br />공사 일정부터 맞춰 보세요.</h2>
-        <p>평수와 업종, 오픈 희망일만 알려주시면 1영업일 안에 예상 일정과 견적 범위를 안내합니다.</p>
+    <section class="section section--white">
+      <div class="container split-contact">
+        <div class="reveal">
+          <span class="label">Contact</span>
+          <h2 class="big-en">Let's Talk<br />About Space</h2>
+          <p>오픈 날짜가 정해졌다면, 공사 일정부터 맞춰 보세요.<br />업종과 면적, 오픈 희망일만 알려주시면<br /><strong>1영업일 안에</strong> 예상 일정과 견적 범위를 안내합니다.</p>
+          <div class="actions"><a href="contact.html" class="btn btn--dark">견적 문의</a><a href="tel:023360000" class="btn btn--line btn--plain">02-336-0000</a></div>
+          <img class="side-img" src="assets/img/studio.jpg" alt="자재 샘플과 도면" loading="lazy" />
+        </div>
+        <img class="main-img reveal" src="assets/img/pilates.jpg" alt="필라테스 스튜디오 시공 사례" loading="lazy" />
       </div>
-      <div class="cta__actions">
-        <a href="contact.html" class="btn btn--white">견적 문의하기</a>
-        <a href="tel:023360000" class="btn btn--ghost-white">02-336-0000</a>
-      </div>
-    </div>
-  </section>
+    </section>
   </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer__top">
-        <a href="index.html" class="logo"><span class="logo__mark" aria-hidden="true"></span><span>GRAIN<small>그레인 인테리어</small></span></a>
-        <nav class="footer__nav" aria-label="하단 메뉴">
-          <a href="about.html">회사소개</a><a href="works.html">시공사례</a><a href="service.html">서비스</a><a href="contact.html">견적문의</a>
-        </nav>
+        <a href="index.html" class="footer__logo" aria-label="그레인 인테리어 홈"><img src="assets/logo/grain-logo-white.svg" alt="GRAIN 그레인 인테리어" width="190" height="60" /></a>
+        <div class="footer__col"><h4>About</h4><a href="about.html">회사소개</a><a href="about.html#team">팀 소개</a><a href="about.html#location">오시는 길</a></div>
+        <div class="footer__col"><h4>Service</h4><a href="works.html">시공사례</a><a href="service.html">서비스</a><a href="service.html#process">진행 과정</a></div>
+        <div class="footer__col"><h4>Contact</h4><a href="contact.html">견적 문의</a><a href="tel:023360000">02-336-0000</a><a href="mailto:hello@grain-interior.example">hello@grain-interior.example</a></div>
       </div>
-      <div class="footer__info">
-        <span>그레인 인테리어</span><i class="sep">|</i><span>대표 한지우</span><i class="sep">|</i><span>사업자등록번호 000-00-00000</span><br />
-        <span>서울특별시 마포구 월드컵로 00, 3층</span><i class="sep">|</i><span>T. 02-336-0000</span><i class="sep">|</i><span>hello@grain-interior.example</span>
-        <p class="footer__copy">이 사이트는 홈페이지 제작 포트폴리오용 가상 업체이며, 사진은 AI로 생성한 이미지입니다. © 2026 GRAIN Interior</p>
+      <div class="footer__bottom">
+        <div>
+          <span>그레인 인테리어</span><i class="sep"> | </i><span>대표 한지우</span><i class="sep"> | </i><span>사업자등록번호 000-00-00000</span><br />
+          <span>서울특별시 마포구 월드컵로 00, 3층</span><i class="sep"> | </i><span>평일 09:00 – 18:00</span>
+          <p class="footer__copy">이 사이트는 홈페이지 제작 포트폴리오용 가상 업체이며, 사진은 AI로 생성한 이미지입니다. © 2026 GRAIN Interior</p>
+        </div>
+        <a href="#" class="to-top" aria-label="맨 위로">↑</a>
       </div>
     </div>
   </footer>
@@ -149,6 +150,6 @@
     <a href="contact.html">견적 문의</a>
   </nav>
 
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
